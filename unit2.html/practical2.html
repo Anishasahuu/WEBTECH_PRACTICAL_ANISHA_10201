@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--demonstrate the use of different css selectors (class,id,descendant,group,universal).-->
+<html>
+<head>
+    <title>CSS Selectors Demo</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+        #main-title {
+            color: darkblue;
+            text-align: center;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        section p {
+            color: green;
+        }
+        h2, h3, p {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">CSS Selectors Demonstration</h1>
+
+    <section>
+        <h2>Class Selector Example</h2>
+        <p class="highlight">This paragraph uses the class selector to highlight text.</p>
+    </section>
+
+    <section>
+        <h2>ID Selector Example</h2>
+        <p>The heading above uses an ID selector to style it.</p>
+    </section>
+
+    <section>
+        <h2>Descendant Selector Example</h2>
+        <p>This paragraph is inside a section, styled using a descendant selector.</p>
+    </section>
+
+    <section>
+        <h2>Group Selector Example</h2>
+        <h3>Subheading styled with group selector</h3>
+        <p>Paragraph also styled with group selector.</p>
+    </section>
+</body>
+</html>

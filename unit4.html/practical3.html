@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--add interactivity using event listeners(addeventlistener, removeeventlistener ) for mouse/keyboard events-->
+<html>
+<head>
+    <title>Event Listener Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .highlight {
+            background-color: gold;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event Listener Example</h2>
+
+    <button id="addMouse">Add Mouse Listener</button>
+    <button id="removeMouse">Remove Mouse Listener</button>
+    <br><br>
+    <button id="addKey">Add Keyboard Listener</button>
+    <button id="removeKey">Remove Keyboard Listener</button>
+
+    <div id="box">Hover or Press Keys!</div>
+
+    <script>
+        let box = document.getElementById("box");
+        function mouseHandler() {
+            box.classList.toggle("highlight");
+        }
+        function keyHandler(event) {
+            if (event.key === "h") {
+                box.innerHTML = "You pressed 'h'!";
+            } else if (event.key === "c") {
+                box.innerHTML = "You pressed 'c'!";
+            }
+        }
+        document.getElementById("addMouse").addEventListener("click", function() {
+            box.addEventListener("mouseover", mouseHandler);
+            alert(" Mouseover listener added!");
+        });
+
+        document.getElementById("removeMouse").addEventListener("click", function() {
+            box.removeEventListener("mouseover", mouseHandler);
+            alert(" Mouseover listener removed!");
+        });
+        document.getElementById("addKey").addEventListener("click", function() {
+            document.addEventListener("keydown", keyHandler);
+            alert(" Keyboard listener added! (Press 'h' or 'c')");
+        });
+
+        document.getElementById("removeKey").addEventListener("click", function() {
+            document.removeEventListener("keydown", keyHandler);
+            alert(" Keyboard listener removed!");
+        });
+    </script>
+</body>
+</html>

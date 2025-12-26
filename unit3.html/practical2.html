@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--write javascript to demonstate conditional statements and looping (for,while ,do while).-->
+<html>
+<head>
+    <title>JavaScript Conditionals and Loops Demo</title>
+</head>
+<body>
+    <h2>Open the console to see the output</h2>
+
+    <script>
+        // --- CONDITIONAL STATEMENTS ---
+        let number = 15;
+        console.log("Conditional Statements Demo:");
+        if (number > 20) {
+            console.log(number + " is greater than 20");
+        } else if (number === 20) {
+            console.log(number + " is equal to 20");
+        } else {
+            console.log(number + " is less than 20");
+        }
+        // --- FOR LOOP ---
+        console.log("\nFor Loop Demo:");
+        for (let i = 1; i <= 5; i++) {
+            console.log("Iteration " + i);
+        }
+        // --- WHILE LOOP ---
+        console.log("\nWhile Loop Demo:");
+        let count = 1;
+        while (count <= 5) {
+            console.log("Count is: " + count);
+            count++;
+        }
+        // --- DO WHILE LOOP ---
+        console.log("\nDo While Loop Demo:");
+        let x = 1;
+        do {
+            console.log("x is: " + x);
+            x++;
+        } while (x <= 5);
+        // --- EXTRA: Combining conditionals with loops ---
+        console.log("\nEven/Odd Check using For Loop:");
+        for (let j = 1; j <= 10; j++) {
+            if (j % 2 === 0) {
+                console.log(j + " is Even");
+            } else {
+                console.log(j + " is Odd");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--create a responsive web page using media queries and mobile first desing with flexible units.
+-->
+<html>
+<head>
+    <title>Responsive Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            background-color: #555;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: block;
+            margin: 0.5rem 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            padding: 1rem;
+        }
+        article {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        @media (min-width: 600px) {
+            nav ul li {
+                display: inline-block;
+                margin: 0 1rem;
+            }
+
+            main {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2%;
+            }
+
+            article {
+                flex: 1 1 45%;
+            }
+        }
+        @media (min-width: 900px) {
+            main {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 2%;
+            }
+            article {
+                flex: 1 1 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Webpage</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Article 1</h2>
+            <p>This is the first article. On mobile, it stacks vertically. On larger screens, it adjusts into columns.</p>
+        </article>
+
+        <article>
+            <h2>Article 2</h2>
+            <p>This is the second article. Flexible units ensure smooth resizing across devices.</p>
+        </article>
+
+        <article>
+            <h2>Article 3</h2>
+            <p>This is the third article. Media queries change layout at 600px and 900px breakpoints.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Responsive Design Demo</p>
+    </footer>
+</body>
+</html>

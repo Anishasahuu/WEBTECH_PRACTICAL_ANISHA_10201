@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--create a table based layout with murge cells agllinment and captin using html-->
+<html>
+<head>
+  <title>Table Layout Example</title>
+</head>
+<body>
+  <table border="1" width="900" align="center" cellpadding="10" cellspacing="0">
+    <caption><b>Website Layout (Table-based, no CSS)</b></caption>
+    <tr>
+      <th colspan="3" align="center">My Website Header</th>
+    </tr>
+    <tr>
+      <td colspan="3" align="center">
+        <b>Navigation:</b>
+        Home | About | Services | Contact
+      </td>
+    </tr>
+    <tr>
+      <td width="200" valign="top" align="left">
+        <b>Sidebar</b><br>
+        - Link 1<br>
+        - Link 2<br>
+        - Link 3<br>
+        - Link 4<br>
+      </td>
+      <td rowspan="2" valign="top" align="left">
+        <h3 align="left">Welcome to the content area</h3>
+        <p align="justify">
+          This section demonstrates a cell that uses <b>rowspan</b> to span two rows. 
+          You can place your main text, images, or forms here. The text is aligned 
+          using the <code>align</code> and <code>valign</code> attributes for simple, 
+          CSS-free control.
+        </p>
+        <table border="1" width="100%" cellpadding="6" cellspacing="0" align="center">
+          <caption><b>Featured Items</b></caption>
+          <tr>
+            <th align="left">Item</th>
+            <th align="right">Price</th>
+          </tr>
+          <tr>
+            <td align="left">Basic Plan</td>
+            <td align="right">₹499</td>
+          </tr>
+          <tr>
+            <td align="left">Pro Plan</td>
+            <td align="right">₹999</td>
+          </tr>
+        </table>
+
+        <p align="left">
+          Below is an example of merged cells using <b>colspan</b> in a small info block:
+        </p>
+
+        <table border="1" width="100%" cellpadding="6" cellspacing="0">
+          <tr>
+            <td colspan="2" align="center"><b>Announcement</b></td>
+          </tr>
+          <tr>
+            <td align="left">Date</td>
+            <td align="right">26 Dec 2025</td>
+          </tr>
+          <tr>
+            <td align="left">Message</td>
+            <td align="left">Happy holidays! New features coming soon.</td>
+          </tr>
+        </table>
+      </td>
+      <td width="200" valign="top" align="center">
+        <b>Quick Info</b><br><br>
+        <table border="1" cellpadding="6" cellspacing="0" width="100%">
+          <tr>
+            <td align="left">Status</td>
+            <td align="right">Online</td>
+          </tr>
+          <tr>
+            <td align="left">Users</td>
+            <td align="right">128</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" align="left">
+        <b>Sidebar (bottom)</b><br>
+        Tips, notes, or ads.
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3" align="center">
+        © 2025 My Website — All rights reserved.
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

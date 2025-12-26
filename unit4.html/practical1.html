@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--demonstrate dom manuplation using getelementbyid() queryselector() and innerhtml-->
+<html>
+<head>
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        #message {
+            color: darkblue;
+            font-weight: bold;
+        }
+        .highlight {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>DOM Manipulation Example</h2>
+    <p id="message">This is the original message.</p>
+    <p class="info">Click the button to change me!</p>
+    <button onclick="changeContent()">Change Content</button>
+    <script>
+        function changeContent() {
+            let msg = document.getElementById("message");
+            msg.innerHTML = "Message updated using <b>getElementById()</b>";
+            let infoPara = document.querySelector(".info");
+            infoPara.innerHTML = "Content changed using <b>querySelector()</b>";
+            let heading = document.querySelector("h2");
+            heading.innerHTML = "DOM Manipulation in Action";
+        }
+    </script>
+</body>
+</html>

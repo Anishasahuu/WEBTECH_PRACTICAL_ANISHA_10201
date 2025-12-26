@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--create and manipulate elements using javascript append remove or modify child nodes-->
+<html>
+<head>
+    <title>DOM Element Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        #container {
+            border: 2px solid #333;
+            padding: 15px;
+            width: 300px;
+            min-height: 100px;
+        }
+        .child {
+            margin: 5px;
+            padding: 5px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>DOM Manipulation: Append, Remove, Modify</h2>
+
+    <button onclick="addChild()">Add Child</button>
+    <button onclick="removeChild()">Remove Last Child</button>
+    <button onclick="modifyChild()">Modify First Child</button>
+
+    <div id="container">
+        <p class="child">Initial Child Node</p>
+    </div>
+
+    <script>
+        function addChild() {
+            let container = document.getElementById("container");
+            let newChild = document.createElement("p"); 
+            newChild.className = "child";
+            newChild.innerHTML = "✨ New Child Added!";
+            container.appendChild(newChild); 
+        }
+        function removeChild() {
+            let container = document.getElementById("container");
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+            } else {
+                alert("No child nodes to remove!");
+            }
+        }
+        function modifyChild() {
+            let container = document.getElementById("container");
+            if (container.firstChild) {
+                container.firstChild.innerHTML = "First Child Modified!";
+                container.firstChild.style.backgroundColor = "lightgreen";
+            } else {
+                alert("No child nodes to modify!");
+            }
+        }
+    </script>
+</body>
+</html>

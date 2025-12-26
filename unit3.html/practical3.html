@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--create and inovoke user defined functions in javascript use var let and const for scope demonstration give -->
+<html>
+<head>
+    <title>Functions and Scope Demo</title>
+</head>
+<body>
+    <h2>JavaScript Functions & Scope Demonstration</h2>
+    <button onclick="runDemo()">Run Demo</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        function runDemo() {
+            let resultText = "";
+            function addNumbers(a, b) {
+                return a + b;
+            }
+            function greet(name) {
+                return "Hello, " + name + "!";
+            }
+            resultText += "Addition (5 + 3): " + addNumbers(5, 3) + "\n";
+            resultText += greet("Anisha") + "\n\n";
+            resultText += "Scope Demonstration:\n";
+
+            if (true) {
+                var x = 10;   
+                let y = 20;   
+                const z = 30;
+                resultText += "Inside block: x=" + x + ", y=" + y + ", z=" + z + "\n";
+            }
+            resultText += "Outside block: x=" + x + "\n";
+            try {
+                resultText += "Outside block: y=" + y + "\n";
+            } catch (error) {
+                resultText += "Outside block: y is not accessible (" + error.message + ")\n";
+            }
+
+            try {
+                resultText += "Outside block: z=" + z + "\n";
+            } catch (error) {
+                resultText += "Outside block: z is not accessible (" + error.message + ")\n";
+            }
+
+            document.getElementById("output").innerText = resultText;
+        }
+    </script>
+</body>
+</html>

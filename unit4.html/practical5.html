@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--create a simple drawing using the <canva> element draw shapes and fill colors
+-->
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Canvas Drawing</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    #canvas { border: 1px solid #333; }
+  </style>
+</head>
+<body>
+  <h2>Simple Drawing with the HTML <canvas> element</h2>
+  <p>Click "Draw" to render shapes and colors on the canvas.</p>
+
+  <canvas id="canvas" width="500" height="300"></canvas>
+  <br><br>
+  <button id="drawBtn">Draw</button>
+  <button id="clearBtn">Clear</button>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const grad = ctx.createLinearGradient(0, 0, 0, canvas.height);
+      grad.addColorStop(0, "#f0f8ff");
+      grad.addColorStop(1, "#cde7ff");
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#ff7f50";
+      ctx.fillRect(30, 30, 120, 80);
+
+      ctx.strokeStyle = "#333";
+      ctx.lineWidth = 3;
+      ctx.strokeRect(30, 130, 120, 80);
+
+      ctx.beginPath();
+      ctx.arc(250, 70, 40, 0, Math.PI * 2);
+      ctx.fillStyle = "#6a5acd";
+      ctx.fill();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.arc(250, 170, 40, 0, Math.PI * 2);
+      ctx.strokeStyle = "#6a5acd";
+      ctx.lineWidth = 4;
+      ctx.stroke();
+      ctx.closePath();
+
+      ctx.beginPath();
+      ctx.moveTo(380, 40);
+      ctx.lineTo(450, 120);
+      ctx.lineTo(310, 120);
+      ctx.closePath();
+      ctx.fillStyle = "#2ecc71";
+      ctx.fill();
+      ctx.strokeStyle = "#1b894b";
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(160, 230);
+      ctx.lineTo(440, 230);
+      ctx.strokeStyle = "#e74c3c";
+      ctx.lineWidth = 5;
+      ctx.stroke();
+      ctx.closePath();
+
+    tyle = "#000";
+      ctx.font = "16px Arial";
+      ctx.fillText("Canvas Shapes: rect, circle, triangle, line, text", 20, 270);
+    }
+
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    document.getElementById("drawBtn").addEventListener("click", draw);
+    document.getElementById("clearBtn").addEventListener("click", clearCanvas);
+    draw();
+  </script>
+</body>
+</html>

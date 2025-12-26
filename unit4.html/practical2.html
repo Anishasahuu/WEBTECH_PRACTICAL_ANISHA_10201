@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--show or hide html element using java script and toggle css classes dynamically-->
+<html>
+<head>
+    <title>Show/Hide & Toggle Classes Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        #myBox {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .hidden {
+            display: none;
+        }
+        .highlight {
+            background-color: gold;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Show/Hide & Toggle CSS Classes</h2>
+
+    <button onclick="toggleVisibility()">Show/Hide Box</button>
+    <button onclick="toggleHighlight()">Toggle Highlight</button>
+
+    <div id="myBox">Hello, I am a Box!</div>
+
+    <script>
+        function toggleVisibility() {
+            let box = document.getElementById("myBox");
+            box.classList.toggle("hidden"); 
+        }
+        function toggleHighlight() {
+            let box = document.getElementById("myBox");
+            box.classList.toggle("highlight"); 
+        }
+    </script>
+</body>
+</html>

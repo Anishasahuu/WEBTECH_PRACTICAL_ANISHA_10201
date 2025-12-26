@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--use div and span elements for layout and apply styling with css.-->
+<html>
+<head>
+    <title>Div and Span Layout Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .nav {
+            background-color: #555;
+            padding: 10px;
+        }
+        .nav span {
+            margin: 0 15px;
+            color: white;
+            cursor: pointer;
+        }
+        .content {
+            display: flex;
+            margin: 20px;
+        }
+        .sidebar {
+            width: 25%;
+            padding: 15px;
+            border: 2px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .main {
+            width: 70%;
+            margin-left: 5%;
+            padding: 15px;
+            border: 2px solid #ccc;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My Webpage Layout</h1>
+    </div>
+    <div class="nav">
+        <span>Home</span>
+        <span>Articles</span>
+        <span>About</span>
+        <span>Contact</span>
+    </div>
+    <div class="content">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>This is the sidebar area with extra links or info.</p>
+        </div>
+        <div class="main">
+            <h2>Main Content</h2>
+            <p>Here is the main content of the page. Notice how we can use 
+               <span class="highlight">span elements</span> to highlight text inline.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 My Webpage Example</p>
+    </div>
+</body>
+</html>
